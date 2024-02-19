@@ -17,7 +17,6 @@ typedef FS_FileHeaderData FS_Header[FS_FILES_MAX];
 /* Sector metadata included in every sector of HDD with the data */
 typedef struct {
     UINT16 nextSectorIdx;              /* ID of the next sector where the file continues */
-                                        // 0 means termination -> define as a macro
     UINT16 storedDataSize;          /* Size of stored file-data within the sector in bytes */
 } FS_FileSectorMetadata;
 
